@@ -1,68 +1,54 @@
 # Red Clover Wiki — Content Repo
 
-## Purpose
-This repository stores the Markdown source for the Red Clover Wiki. Wiki.js mirrors the
-`content/` directory to power the live site, so updates made here are picked up by the
-Wiki.js Git sync service and deployed to the wiki after the next synchronization cycle.
-Admins can also trigger a manual sync from Wiki.js when urgent changes land.
+This repo syncs with Wiki.js (bi-directional). With **Always use locale namespace** enabled, pages live in `content/en/...`.
 
-## Expected directory layout
-All user-editable articles live under `content/`. Keep the following structure in mind
-when adding or reorganizing files:
+## Expected layout
+- `content/en/strains/...`
+- `content/en/grow-guides/...`
+- `content/en/grow-journals/...`
+- `content/en/terpenes/...`
+- `content/en/pests-diseases/...`
+- `content/en/calculators/...`
+- `_templates/` reusable page templates
+- `_includes/` shared snippets (callouts, tables) embedded with `@import`
 
-| Path | Description |
-| ---- | ----------- |
-| `content/home.md` | Landing page for the wiki home node. |
-| `content/grow-guides/` | Articles grouped by guide type (seedlings, nutrients, troubleshooting, etc.). |
-| `content/grow-journals/` | Individual cultivation journals. |
-| `content/pests-diseases/` | Identification and treatment write-ups. |
-| `content/strains/` | One page per strain profile. |
-| `content/terpenes/` | Terpene reference articles. |
-| `content/_includes/` | Reusable partials (callouts, tables) that can be embedded with `@import`. |
-| `content/_assets/` | Static assets (images, downloadable PDFs). Organize by topic inside this folder. |
-| `content/_calculators/` | JSON or Markdown calculators consumed by Wiki.js calculator modules. |
-| `_templates/` | Markdown templates editors can copy when creating new pages. |
+## Sync flow
+- Edits in GitHub → **Force Sync** in Wiki.js (Storage → Git) to pull immediately.
+- Edits in Wiki.js → auto-commit to this repo on schedule; use **Force Sync** if you want it now.
 
-Add new top-level sections sparingly and coordinate with Wiki.js admins so that navigation
-and permissions stay consistent.
+## Navigation checklist
+Update **Administration → Navigation → Primary** in Wiki.js after adding sections. Recommended entries:
 
-## Wiki.js ↔ GitHub sync flow
-1. Editors commit and push changes to GitHub (usually to `main`).
-2. Wiki.js polls the Git repository on its configured schedule, fetching new commits.
-3. During each sync cycle Wiki.js applies Git changes into its internal database.
-4. When authors edit content directly inside Wiki.js, the platform writes those updates
-   back to the Git repo so both sides stay in lockstep. Resolve conflicts in Git first,
-   then trigger a manual sync if necessary (`Administration → Git → Synchronize → Force`).
+1. Strains → `/en/strains`
+2. Grow Guides → `/en/grow-guides`
+3. Grow Journals → `/en/grow-journals`
+4. Terpenes → `/en/terpenes`
+5. Pests & Diseases → `/en/pests-diseases`
+6. Calculators → `/en/calculators`
 
-## Backup and rollback checklist
-Before major edits:
-1. Clone the repo locally and create a dated backup branch:
-   ```bash
-   git checkout main
-   git pull
-   git checkout -b backup/$(date +%Y-%m-%d)
-   ```
-2. Commit work-in-progress changes to that branch before opening a pull request.
+## Embed calculators
+Pick the option that fits your workflow:
 
-If you need to revert:
-1. Identify the last known-good commit and create a recovery branch:
-   ```bash
-   git checkout -b restore/<ticket>
-   git revert <bad_commit_sha>
-   ```
-2. Merge the revert branch to `main` through the usual review process.
-3. In Wiki.js, open **Administration → Git → Synchronize** and select **Force pull** to
-   overwrite the wiki database with the reverted Git state.
-4. If Wiki.js edits accidentally clobbered Git history, you can push a known-good commit
-   with `git push --force-with-lease origin main` (coordinate with the team first), then
-   run **Force pull** again in Wiki.js to realign the database.
+### Option A — HTML page (quickest)
+1. Create a page under Calculators with **Editor = HTML**.
+2. Paste the HTML+JS for your tool.
+3. If scripts are stripped, enable **Administration → Rendering → Markdown → Allow unsafe HTML**, or place scripts in **Administration → Theme → Custom Scripts**.
 
-## Navigation and template guidance
-* Navigation entries are managed inside Wiki.js under **Navigation → Primary**. After
-  adding or renaming files in `content/`, coordinate with an admin to update the menu so
-  links stay accurate.
-* Use the Markdown files in `_templates/` whenever you create a new strain profile,
-  journal, terpene entry, or pest/disease article. Copy the relevant template into the
-  appropriate `content/` subfolder, then replace placeholder fields before committing.
-* Shared snippets (callouts, warnings, reusable tables) belong in `content/_includes/` so
-  editors can embed them with `@import` tags rather than duplicating copy.
+### Option B — Global script + Markdown container
+1. Add your JavaScript under **Administration → Theme → Custom Scripts (footer)**.
+2. On the Markdown page, include a wrapper like `<div id="calc-vpd"></div>` and initialize the calculator from the global script.
+
+### Option C — External host + iframe (safest sandbox)
+Serve the calculator on GitHub Pages/Netlify and embed:
+
+```html
+<iframe src="https://YOUR-USERNAME.github.io/YOUR-CALC/" width="100%" height="820" loading="lazy"></iframe>
+```
+
+## Troubleshooting
+- **Git target red?** Verify the repository URL (`https://github.com/clovervirus/red-clover-wiki-content.git`), PAT permissions, and that **Authentication Type = BASIC**. Use **Purge Local Repository** then **Force Sync** if histories diverge.
+- **Pages missing?** Confirm files live under `content/en/...`, run **Force Sync**, then **Administration → Maintenance → Rebuild Search Index**.
+- **Conflicts from Wiki edits?** Revert the bad commit here, then **Force Sync** so Wiki.js re-imports the clean history.
+
+## Rollback
+If a bad commit breaks content, revert it in GitHub (or restore from backup), then in Wiki.js run **Force Sync** so the wiki database matches the reverted commit.
