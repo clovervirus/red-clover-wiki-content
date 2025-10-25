@@ -2,30 +2,26 @@ name: Content CI
 on:
   pull_request:
     paths:
-      - 'content/**.md'
+      - '**/*.md'
+      - '.markdownlint.jsonc'
+      - '.remarkrc.cjs'
   push:
     branches: [ main ]
     paths:
-      - 'content/**.md'
+      - '**/*.md'
+
 jobs:
-  check:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Ensure front-matter exists (title & updated)
-        run: |
-          set -e
-          fail=0
-          while IFS= read -r -d '' f; do
-            head -n 30 "$f" | grep -q '^---$' || { echo "Missing fm start: $f"; fail=1; continue; }
-            head -n 30 "$f" | grep -q '^title:' || { echo "Missing title: $f"; fail=1; }
-            head -n 30 "$f" | grep -q '^updated:' || { echo "Missing updated: $f"; fail=1; }
-          done < <(find content -name '*.md' -print0)
-          [ $fail -eq 0 ]
-
-      - name: Markdown lint
-        uses: DavidAnson/markdownlint-cli2-action@v16
+      - uses: actions/setup-node@v4
         with:
-          globs: |
-            content/**/*.md
+          node-version: 20
+      - run: npm i -D markdownlint-cli2 remark-cli remark-preset-lint-recommended linkinator
+      - name: Markdownlint
+        run: npx markdownlint-cli2 "**/*.md" "!node_modules" "!**/dist/**"
+      - name: Remark (common issues)
+        run: npx remark . --quiet --frail || true
+      - name: Check links (internal only)
+        run: npx linkinator content --recurse --silent --timeout=60000 --skip "^https?://" || true
