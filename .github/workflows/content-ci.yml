@@ -1,42 +1,31 @@
 name: Content CI
-
 on:
   pull_request:
     paths:
-      - 'content/**/*.md'
-      - '.github/workflows/content-ci.yml'
-      - '.markdownlint.json'
+      - 'content/**.md'
   push:
-    branches: [main]
+    branches: [ main ]
     paths:
-      - 'content/**/*.md'
-      - '.github/workflows/content-ci.yml'
-      - '.markdownlint.json'
-
+      - 'content/**.md'
 jobs:
-  front-matter:
-    name: Validate front matter
+  check:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Validate front matter
-        uses: tj-actions/validate-front-matter@v16
-        with:
-          files: |
-            content/**/*.md
+      - name: Ensure front-matter exists (title & updated)
+        run: |
+          set -e
+          fail=0
+          while IFS= read -r -d '' f; do
+            head -n 30 "$f" | grep -q '^---$' || { echo "Missing fm start: $f"; fail=1; continue; }
+            head -n 30 "$f" | grep -q '^title:' || { echo "Missing title: $f"; fail=1; }
+            head -n 30 "$f" | grep -q '^updated:' || { echo "Missing updated: $f"; fail=1; }
+          done < <(find content -name '*.md' -print0)
+          [ $fail -eq 0 ]
 
-  markdownlint:
-    name: Lint Markdown content
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Run markdownlint-cli2
+      - name: Markdown lint
         uses: DavidAnson/markdownlint-cli2-action@v16
         with:
           globs: |
             content/**/*.md
-          config: .markdownlint.json

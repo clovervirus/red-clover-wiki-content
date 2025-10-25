@@ -1,11 +1,14 @@
 ---
-title: JOURNAL TEMPLATE
+title: Last Run Journal
 tags: [journal]
 updated: 2025-10-25
 ---
-# {{Run Name}}
+# Last Run Journal
 
 ## Seed/Clone
+
 ## Veg
+
 ## Flower
+
 ## Harvest & Cure
