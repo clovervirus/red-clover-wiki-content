@@ -10,9 +10,12 @@ updated: 2025-10-25
 ## Calibration Schedule
 
 - **pH Calibration (Weekly):**
+
   - Rinse probe with RO water, blot dry, and calibrate with 7.0 solution followed by 4.0.
   - Record calibration date, time, and buffer lot numbers in the instrument log.
+
 - **EC Calibration (Monthly):**
+
   - Use 2.77 EC standard at 77 °F, ensuring solution is within expiry.
   - If readings drift >0.2 EC, repeat and replace the probe cap solution.
 

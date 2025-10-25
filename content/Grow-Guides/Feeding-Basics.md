@@ -17,8 +17,8 @@ tags: [grow, nutrients]
 
 ## Stage Targets (starting points)
 
-- **Veg:** 1.3–1.8 mS/cm (650–900 ppm 500-scale)  
-- **Flower:** 1.8–2.3 mS/cm (900–1150 ppm 500-scale)  
+- **Veg:** 1.3–1.8 mS/cm (650–900 ppm 500-scale)
+- **Flower:** 1.8–2.3 mS/cm (900–1150 ppm 500-scale)
 - **Runoff rule:** If **runoff EC** trends **up** → reduce feed or increase volume; trends **down** → increase feed or frequency.
 
 ## Safety / Compatibility

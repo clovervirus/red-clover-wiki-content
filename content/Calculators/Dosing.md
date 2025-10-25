@@ -6,11 +6,13 @@ updated: 2025-10-25
 ---
 
 ### Inputs
+
 1. Enter target EC (mS/cm) and reservoir volume (gallons).
 2. Record concentrate strength from [[Feeding/Recipes/Mother-Stock]] (default 240 mL/gal).
 3. Note current background EC from [[Feeding/Water-Source]].
 
 ### Steps
+
 1. Subtract background EC from target to determine net nutrient EC.
 2. Use the table below to convert net EC to mL of concentrate per gallon.
 

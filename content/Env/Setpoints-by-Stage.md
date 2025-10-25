@@ -16,6 +16,7 @@ updated: 2025-10-25
 | Flush | 76 | 70 | 52 | 1.5 | 800 |
 
 ## Implementation Notes
+
 - Update room controllers through the BMS scenes listed in [[Env/Rooms/Flower]].
 - Use the [[Calculators/Lighting]] worksheet to confirm PPFD remains within ±5% when dimming.
 - Log any adjustments outside these ranges in [[Data/Crop-Log]] with reason and duration.

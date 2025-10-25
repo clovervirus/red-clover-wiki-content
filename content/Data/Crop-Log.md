@@ -6,6 +6,7 @@ updated: 2025-10-25
 ---
 
 ## Daily Entry Template
+
 - **Date / Time:** Auto-fill from Wiki.js entry.
 - **Room / Zone:** e.g., Flower 2A, Veg Hall.
 - **Observation:** Concise note (max 140 chars) such as "Slight tip burn front left table".
@@ -14,6 +15,7 @@ updated: 2025-10-25
 - **Follow-up:** Assign owner and due date.
 
 ## Usage Rules
+
 1. Log entries during the shift they occur. Do not backfill unless approved by supervisor.
 2. Tag related pages using Wiki links, such as [[Feeding/Water-Source]] or [[IPM/First-Response]].
 3. Archive weekly summaries to the active [[Grow-Journals/_template|Grow Journal]] before Monday stand-up.

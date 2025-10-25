@@ -6,7 +6,7 @@ tags: [calculator]
 
 # Calculators
 
-- [[Calculators/VPD-Calculator|VPD Calculator]]  
+- [[Calculators/VPD-Calculator|VPD Calculator]]
 - [[Calculators/EC-PPM-Converter|EC ⇄ PPM Converter]]
 
 > To enable embedded HTML iframes: **Administration → Editor → Allow HTML**.

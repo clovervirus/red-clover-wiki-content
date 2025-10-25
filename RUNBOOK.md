@@ -1,9 +1,9 @@
 ---
 title: RUNBOOK
-description: 
+description:
 published: true
 date: 2025-10-25T12:18:10.378Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2025-10-25T12:18:09.132Z
 ---
@@ -15,6 +15,7 @@ dateCreated: 2025-10-25T12:18:09.132Z
 1. Open **Administration → Storage → Git** in Wiki.js.
 2. Confirm the target shows **Status: Green** with last sync under 10 minutes.
 3. If status is red:
+
    - Click **Purge Local Repository**.
    - Click **Import Everything**.
    - Click **Force Sync**.
@@ -36,14 +37,18 @@ dateCreated: 2025-10-25T12:18:09.132Z
 
 1. Enable **Administration → Editor → Allow HTML**.
 2. Edit the calculator page in `content/Calculators/` and embed with `<iframe>` or
+
    a div plus a global script.
+
 3. Host custom widgets under `static/` or an external site if they require
+
    JavaScript frameworks.
 
 ## Backups
 
 - Content is backed up via Git. Ensure sync status is green daily.
 - For database backups, schedule a weekly `pg_dump` on the server and store files
+
   outside the repo (covered by the infrastructure runbook).
 
 ## Local Development

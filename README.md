@@ -1,9 +1,9 @@
 ---
 title: README
-description: 
+description:
 published: true
 date: 2025-10-25T12:18:09.097Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2025-10-24T07:23:35.054Z
 ---
