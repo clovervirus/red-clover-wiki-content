@@ -1,7 +1,7 @@
 ---
 title: Strains
-description: Catalog of all strains grown or tested by Red Clover.
 tags: [catalog]
+updated: 2025-10-23
 ---
 
 # Strains

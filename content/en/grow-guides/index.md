@@ -1,6 +1,7 @@
 ---
 title: Grow Guides
-description: Environment, feeding, IPM, and workflow playbooks.
+tags: []
+updated: 2025-10-23
 ---
 
 # Grow Guides

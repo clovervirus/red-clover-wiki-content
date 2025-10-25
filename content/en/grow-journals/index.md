@@ -1,6 +1,7 @@
 ---
 title: Grow Journals
-description: Week-by-week logs with environment, feed, and notes.
+tags: []
+updated: 2025-10-23
 ---
 
 # Grow Journals
