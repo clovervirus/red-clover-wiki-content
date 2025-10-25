@@ -1,0 +1,17 @@
+{
+  "name": "red-clover-wiki-content",
+  "version": "1.0.0",
+  "description": "Content and lint tooling for the Red Clover Wiki.",
+  "main": "index.js",
+  "scripts": {
+    "lint:markdown": "markdownlint-cli2 \"**/*.md\" '!node_modules' '!**/dist/**'",
+    "lint:remark": "remark . --quiet --frail",
+    "lint:links": "linkinator content --recurse --silent --timeout=60000 --skip ^https?://",
+    "lint": "npm run lint:markdown && npm run lint:remark && npm run lint:links"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "private": true
+}
