@@ -1,6 +1,7 @@
 ---
 title: Myrcene
 tags: [terpene]
+updated: 2025-10-23
 ---
 
 # Myrcene

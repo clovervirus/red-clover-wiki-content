@@ -1,6 +1,7 @@
 ---
 title: Isley
 tags: [strain, hybrid, myrcene]
+updated: 2025-10-23
 ---
 
 # Isley

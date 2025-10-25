@@ -1,6 +1,7 @@
 ---
 title: Powdery Mildew (PM)
 tags: [pest, disease, fungal, ipm]
+updated: 2025-10-23
 ---
 
 # Powdery Mildew (PM)
