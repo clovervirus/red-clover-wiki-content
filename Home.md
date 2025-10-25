@@ -5,7 +5,7 @@ tags: [index]
 updated: 2025-10-25
 ---
 
-# Red Clover Operations Hub
+# Red Clover — Home
 
 ## Quick Links
 

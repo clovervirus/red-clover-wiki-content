@@ -35,7 +35,7 @@ dateCreated: 2025-10-25T12:18:09.132Z
 ## Calculator Embeds
 
 1. Enable **Administration → Editor → Allow HTML**.
-2. Edit the calculator page in `content/Calculators/` and embed with `<iframe>` or
+2. Edit the calculator page under `Calculators/` and embed with `<iframe>` or
    a div plus a global script.
 3. Host custom widgets under `static/` or an external site if they require
    JavaScript frameworks.
@@ -52,7 +52,7 @@ dateCreated: 2025-10-25T12:18:09.132Z
 npm install
 npx markdownlint-cli2 "**/*.md" "!node_modules" "!**/dist/**"
 npx remark . --quiet --frail
-npx linkinator content --recurse --silent --timeout=60000 --skip "^https?://"
+npx linkinator . --recurse --silent --timeout=60000 --skip "^https?://"
 ```
 
 Run the commands before opening a PR to match CI.
