@@ -1,9 +1,9 @@
 ---
 title: CONTRIBUTING
-description: 
+description:
 published: true
 date: 2025-10-25T13:53:04.089Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2025-10-24T07:23:31.833Z
 ---

@@ -1,9 +1,9 @@
 ---
 title: Strain Template
-description: 
+description:
 published: true
 date: 2025-10-25T13:53:08.932Z
-tags: 
+tags:
 editor: markdown
 dateCreated: 2025-10-25T12:18:10.969Z
 ---
