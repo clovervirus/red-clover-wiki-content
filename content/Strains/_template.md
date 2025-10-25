@@ -1,7 +1,11 @@
 ---
 title: Strain Template
-type: strain-template
-updated: 2025-10-25
+description: 
+published: true
+date: 2025-10-25T12:18:12.174Z
+tags: 
+editor: markdown
+dateCreated: 2025-10-25T12:18:10.969Z
 ---
 
 # {{Strain Name}}
