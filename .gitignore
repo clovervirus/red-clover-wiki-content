@@ -1,2 +1,6 @@
-*.DS_Store
+# editor & system
+.DS_Store
 Thumbs.db
+
+# local backups if ever copied here
+backups/
