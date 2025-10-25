@@ -7,7 +7,7 @@ tags: [index]
 Welcome. Start here:
 
 - [[Grow-Guides/Overview]]
-- [[Environment/Targets-and-Checks]]
+- [[Env/Setpoints-by-Stage]]
 - [[Nutrients/Crop-Salt]]
 - [[Instruments/Bluelab-OnePen]]
 - [[IPM/Overview]]
