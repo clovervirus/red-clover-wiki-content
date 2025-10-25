@@ -1,42 +1,20 @@
 name: Content CI
-
 on:
   pull_request:
-    paths:
-      - 'content/**/*.md'
-      - '.github/workflows/content-ci.yml'
-      - '.markdownlint.json'
   push:
-    branches: [main]
-    paths:
-      - 'content/**/*.md'
-      - '.github/workflows/content-ci.yml'
-      - '.markdownlint.json'
+    branches: [ main ]
 
 jobs:
-  front-matter:
-    name: Validate front matter
+  lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Validate front matter
-        uses: tj-actions/validate-front-matter@v16
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          files: |
-            content/**/*.md
-
-  markdownlint:
-    name: Lint Markdown content
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Run markdownlint-cli2
-        uses: DavidAnson/markdownlint-cli2-action@v16
-        with:
-          globs: |
-            content/**/*.md
-          config: .markdownlint.json
+          node-version: 20
+      - name: Run content checks
+        run: |
+          npm i -D markdownlint-cli2 remark-cli remark-preset-lint-recommended linkinator
+          npx markdownlint-cli2 "**/*.md" "!node_modules" "!**/dist/**"
+          npx remark . --use remark-preset-lint-recommended --quiet --frail
+          npx linkinator content --recurse --silent --timeout=60000 --skip "^https?://"
