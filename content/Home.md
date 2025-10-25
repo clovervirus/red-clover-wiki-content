@@ -9,12 +9,13 @@ updated: 2025-10-25
 
 ## Quick Links
 
-- [[Grow-Guides/Overview]]
-- [[Env/Setpoints-by-Stage]]
-- [[Nutrients/Crop-Salt]]
-- [[Instruments/Bluelab-OnePen]]
-- [[IPM/Overview]]
-- [[SOP/Harvest/Checklist]]
+- [[Reference/Targets-by-Stage|Targets by Stage]]
+- [[Grow-Guides/Lighting-Quick-Targets|Lighting Quick Targets]]
+- [[Grow-Guides/VPD-Quick-Chart|VPD Quick Chart]]
+- [[Grow-Guides/Feeding-Basics|Feeding Basics]]
+- [[Grow-Guides/Watering-Cues|Watering Cues]]
+- [[IPM/IPM-Basics|IPM Basics]]
+- [[Calculators|Calculators]]
 
 ## Daily Routine
 
