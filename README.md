@@ -1,3 +1,13 @@
+---
+title: README
+description: 
+published: true
+date: 2025-10-24T08:03:46.866Z
+tags: 
+editor: markdown
+dateCreated: 2025-10-24T07:23:35.054Z
+---
+
 # Red Clover Wiki — Content Repo
 
 This repo syncs with Wiki.js (bi-directional). With **Always use locale namespace** enabled, pages live in `content/en/...`.
