@@ -10,3 +10,4 @@ tags: [ipm, disease]
 2. Apply a registered fungicide or biological per label rates.
 3. Sanitize grow space surfaces and tools after treatment.
 4. Review environment logs for humidity spikes or airflow gaps.
+

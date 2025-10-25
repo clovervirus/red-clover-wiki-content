@@ -25,13 +25,16 @@
 ## Calculator Embeds
 
 1. Enable **Administration → Editor → Allow HTML**.
-2. Edit the calculator page in `content/Calculators/` and embed with `<iframe>` or a div + global script.
-3. Host custom widgets under `static/` or an external site if they require JavaScript frameworks.
+2. Edit the calculator page in `content/Calculators/` and embed with `<iframe>` or
+   a div plus a global script.
+3. Host custom widgets under `static/` or an external site if they require
+   JavaScript frameworks.
 
 ## Backups
 
 - Content is backed up via Git. Ensure sync status is green daily.
-- For database backups, schedule a weekly `pg_dump` on the server and store files outside the repo (covered by infrastructure runbook).
+- For database backups, schedule a weekly `pg_dump` on the server and store files
+  outside the repo (covered by the infrastructure runbook).
 
 ## Local Development
 

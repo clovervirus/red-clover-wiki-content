@@ -10,3 +10,4 @@ tags: [grow, overview]
 2. Prepare media, nutrients, and equipment.
 3. Track each stage with journals and checklists.
 4. Iterate after every run using the data workflow.
+

@@ -1,19 +1,17 @@
----
-title: {{run}}
-type: journal
-updated: {{today}}
----
-
 # {{run}}
 
 ## Seed / Clone
-- Notes:
+
+- Notes: …
 
 ## Vegetative
-- Notes:
+
+- Notes: …
 
 ## Flower
-- Notes:
+
+- Notes: …
 
 ## Harvest & Cure
-- Notes:
+
+- Notes: …

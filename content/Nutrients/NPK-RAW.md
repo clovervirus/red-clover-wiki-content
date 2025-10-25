@@ -9,3 +9,4 @@ tags: [nutrients, additives]
 - Dose according to target ppm of individual elements.
 - Dissolve completely before adding to the main reservoir.
 - Avoid mixing incompatible powders in concentrated form.
+

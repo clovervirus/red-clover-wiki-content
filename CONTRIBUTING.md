@@ -15,6 +15,7 @@ us keep contributions consistent and easy to review. Please read this document b
 opening an issue or submitting a change.
 
 ## Getting Started
+
 - **Clone the repository** and create a dedicated branch for your work (see Branch
   Strategy below).
 - **Install prerequisites** as described in the project README if you plan to run or
@@ -23,6 +24,7 @@ opening an issue or submitting a change.
   start. For minor fixes (typos, formatting), issues are optional but appreciated.
 
 ## Branch Strategy
+
 - Create feature branches from the latest `main` branch using a descriptive name, e.g.
   `feature/update-article-title` or `fix/broken-link`.
 - Keep branches focused on a single topic to make reviews simple and targeted.
@@ -30,6 +32,7 @@ opening an issue or submitting a change.
   conflicts.
 
 ## Making Changes
+
 - Follow any style or content guidance documented in the repository (including
   templates within `_templates/`).
 - Include relevant front matter and metadata when adding or updating content files.
@@ -37,11 +40,13 @@ opening an issue or submitting a change.
   issues.
 
 ## Testing and Validation
+
 - Preview your content locally (e.g., via `yarn dev` for Wiki.js) to ensure formatting,
   links, and assets render correctly.
 - Run any automated checks or linters documented in the README prior to submission.
 
 ## Pull Requests
+
 - Push your branch and open a pull request against `main`.
 - Summarize the motivation and key updates in the PR description.
 - Request a review from a project maintainer. Expect to incorporate feedback or make
@@ -50,6 +55,7 @@ opening an issue or submitting a change.
   unless you have been granted that permission.
 
 ## Code of Conduct
+
 Please be respectful and collaborative in all interactions. Report any issues to the
 maintainers so we can address them promptly.
 

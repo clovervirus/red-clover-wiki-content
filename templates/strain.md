@@ -1,25 +1,16 @@
----
-title: {{name}}
-type: strain
-strain:
-  breeder: ""
-  genetics: ""
-  flowering_days: 63
-  stretch: medium
-  terpenes: [myrcene]
-  notes: ""
-updated: {{today}}
----
-
 # {{name}}
 
+> Breeder: {{breeder}} · Type: {{type}} · Flower time: {{days}} days
+
 ## Grow Notes
-- Env: 
-- Feed: 
-- Training: 
+
+- Env: …
+- Training: …
+- Feed: …
 
 ## Harvest & Cure
-- Harvest date: 
-- Wet/Dry weights: 
-- Aroma/Effects: 
-- Lessons learned: 
+
+- Harvest date: …
+- Wet/Dry weights: …
+- Aroma/Effects: …
+- Lessons learned: …

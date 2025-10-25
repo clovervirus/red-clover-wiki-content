@@ -10,3 +10,4 @@ tags: [grow, post-harvest]
 2. Keep temps 60–65 °F and RH 55–60% until small stems snap.
 3. Trim, jar, and burp daily while stabilizing at 62% RH.
 4. Record jar weights, aroma notes, and cure length.
+

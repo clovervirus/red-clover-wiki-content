@@ -9,3 +9,4 @@ tags: [instruments]
 - Calibrate pH weekly and conductivity monthly; log dates.
 - Rinse the probe with RO water after every reservoir check.
 - Store the cap with reference solution to protect the probe.
+

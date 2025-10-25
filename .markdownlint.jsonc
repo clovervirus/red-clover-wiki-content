@@ -1,6 +1,12 @@
 {
-  "default": true,
-  "MD013": { "line_length": 120 },
-  "MD033": false,
-  "MD041": false
+  // Global defaults
+  "MD013": { "line_length": 120, "code_blocks": false, "tables": false },
+  // Ignore any front-matter titles when counting H1s (we still enforce a single in-body H1)
+  "MD025": { "front_matter_title": "" },
+  // Require languages on fenced code blocks
+  "MD040": true,
+  // Be explicit about blanks-around rules (defaults are fine; listed for clarity)
+  "MD022": true,
+  "MD032": true,
+  "MD009": { "br_spaces": 0 }
 }

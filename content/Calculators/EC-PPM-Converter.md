@@ -8,3 +8,4 @@ tags: [calculator]
 
 - Input EC, output 500/700 scale PPM.
 - Include target ranges per growth stage.
+

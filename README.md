@@ -1,10 +1,12 @@
 # Red Clover Wiki Content
 
-Content for the Red Clover Wiki.js instance. All pages live under `content/`. Edits merged into `main` sync down to Wiki.js via the Git storage integration; changes made directly in the wiki sync back here automatically.
+Content for the Red Clover Wiki.js instance. All pages live under `content/`.
+Edits merged into `main` sync down to Wiki.js via the Git storage integration;
+changes made directly in the wiki sync back here automatically.
 
 ## Repository Layout
 
-```
+```text
 content/               # Markdown pages that become wiki articles
 templates/             # Front-matter templates for new content
 static/images/         # Shared diagrams, photos, and embeds
