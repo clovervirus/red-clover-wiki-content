@@ -10,4 +10,3 @@ tags: [grow, veg]
 - Train canopy: top, tuck, or tie-down once per week.
 - Inspect runoff EC/PPM to confirm feed strength.
 - Refresh notes in the current grow journal.
-

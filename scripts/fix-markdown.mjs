@@ -7,10 +7,9 @@ function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      if (IGNORE_DIRS.has(entry.name)) {
-        continue;
+      if (!IGNORE_DIRS.has(entry.name)) {
+        walk(full);
       }
-      walk(full);
     } else if (entry.isFile() && full.endsWith('.md')) {
       fixFile(full);
     }
@@ -18,12 +17,15 @@ function walk(dir) {
 }
 
 function fixFile(filePath) {
+  const rawLines = fs.readFileSync(filePath, 'utf8').split(/\r?\n/);
+  const cleanedLines = [];
   let inFence = false;
   let h1Seen = false;
-  const lines = fs.readFileSync(filePath, 'utf8').split(/\r?\n/).map((line) => {
-    if (/^```/.test(line)) {
-      inFence = !inFence;
-    }
+
+  for (const raw of rawLines) {
+    let line = raw.replace(/\s+$/, '');
+    const fenceBoundary = /^```/.test(line);
+
     if (!inFence && /^# /.test(line)) {
       if (h1Seen) {
         line = line.replace(/^# /, '## ');
@@ -31,17 +33,83 @@ function fixFile(filePath) {
         h1Seen = true;
       }
     }
-    return line.replace(/\s+$/, '');
-  });
 
-  let output = lines.join('\n');
-  output = output.replace(/(?m)(?<!\n)^(#{1,6} )/g, '\n$1');
-  output = output.replace(/(?m)^(#{1,6} .+)$/g, '$1\n');
-  output = output.replace(/(?m)(?<!\n)^(?:[-*+] |\d+\. )/g, '\n$&');
-  output = output.replace(/(?m)(^[-*+] .+(?:\n[-*+] .+)*)/g, '$1\n');
-  output = output.replace(/(?m)^```$/g, '```text');
+    if (!inFence && fenceBoundary && line === '```') {
+      line = '```text';
+    }
 
-  fs.writeFileSync(filePath, output, 'utf8');
+    cleanedLines.push(line);
+
+    if (fenceBoundary) {
+      inFence = !inFence;
+    }
+  }
+
+  const outputLines = [];
+  let inListBlock = false;
+
+  const isListLine = (value) => /^([-*+] |\d+\. )/.test(value);
+  const isHeadingLine = (value) => /^#{1,6} /.test(value);
+
+  for (let i = 0; i < cleanedLines.length; i += 1) {
+    const line = cleanedLines[i];
+    const next = cleanedLines[i + 1];
+
+    if (isListLine(line)) {
+      if (!inListBlock) {
+        if (outputLines.length && outputLines[outputLines.length - 1] !== '') {
+          outputLines.push('');
+        }
+        inListBlock = true;
+      }
+      outputLines.push(line);
+
+      if (!isListLine(next)) {
+        outputLines.push('');
+        inListBlock = false;
+      }
+      continue;
+    }
+
+    if (inListBlock) {
+      if (outputLines.length && outputLines[outputLines.length - 1] !== '') {
+        outputLines.push('');
+      }
+      inListBlock = false;
+    }
+
+    if (isHeadingLine(line)) {
+      if (outputLines.length && outputLines[outputLines.length - 1] !== '') {
+        outputLines.push('');
+      }
+      outputLines.push(line);
+      if (next !== undefined && next !== '') {
+        outputLines.push('');
+      }
+      continue;
+    }
+
+    outputLines.push(line);
+  }
+
+  const finalLines = [];
+  for (const line of outputLines) {
+    if (line === '' && finalLines.length && finalLines[finalLines.length - 1] === '') {
+      continue;
+    }
+    finalLines.push(line);
+  }
+
+  while (finalLines.length && finalLines[0] === '') {
+    finalLines.shift();
+  }
+
+  let finalText = finalLines.join('\n');
+  if (!finalText.endsWith('\n')) {
+    finalText += '\n';
+  }
+
+  fs.writeFileSync(filePath, finalText, 'utf8');
 }
 
 walk('content');

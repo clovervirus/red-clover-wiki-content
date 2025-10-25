@@ -15,7 +15,7 @@ function Fix-H1s {
       }
       $line -replace '\s+$',''
     }
-    if ($WriteChanges) { $out | Set-Content $_ -Encoding UTF8 } else { $out | Out-Null }
+    if ($WriteChanges) { $out | Set-Content $_ -Encoding UTF8 }
   }
 }
 
@@ -25,7 +25,8 @@ function Fix-Blanks {
     $c = $c -replace '(?m)(?<!\n)^(#{1,6} )','`n$1'
     $c = $c -replace '(?m)^(#{1,6} .+)$','$1`n'
     $c = $c -replace '(?m)(?<!\n)^(?:[-*+] |\d+\. )','`n$0'
-    $c = $c -replace '(?m)(^[-*+] .+(?:\n[-*+] .+)*$)','$1`n'
+    $c = $c -replace '(?m)(^([-*+] .+\n)+)','$1`n'
+    $c = $c -replace '\n{3,}', '\n\n'
     if ($WriteChanges) { Set-Content $_ $c -Encoding UTF8 }
   }
 }

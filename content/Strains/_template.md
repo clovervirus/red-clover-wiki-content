@@ -18,4 +18,3 @@ updated: 2025-10-25
 - Wet/Dry weights:
 - Aroma & Effects:
 - Lessons learned:
-

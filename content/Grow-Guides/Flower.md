@@ -10,4 +10,3 @@ tags: [grow, flower]
 - Track trichome development and harvest window.
 - Adjust feed schedule when runoff deviates from targets.
 - Maintain airflow and IPM scouting every 2–3 days.
-

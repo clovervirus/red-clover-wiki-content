@@ -1,14 +1,8 @@
 name: Content CI
 on:
   pull_request:
-    paths:
-      - '**/*.md'
-      - '.markdownlint.jsonc'
-      - '.remarkrc.cjs'
   push:
     branches: [ main ]
-    paths:
-      - '**/*.md'
 
 jobs:
   lint:
@@ -18,10 +12,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm i -D markdownlint-cli2 remark-cli remark-preset-lint-recommended linkinator
-      - name: Markdownlint
-        run: npx markdownlint-cli2 "**/*.md" "!node_modules" "!**/dist/**"
-      - name: Remark (common issues)
-        run: npx remark . --quiet --frail || true
-      - name: Check links (internal only)
-        run: npx linkinator content --recurse --silent --timeout=60000 --skip "^https?://" || true
+      - name: Run content checks
+        run: |
+          npm i -D markdownlint-cli2 remark-cli remark-preset-lint-recommended linkinator
+          npx markdownlint-cli2 "**/*.md" "!node_modules" "!**/dist/**"
+          npx remark . --use remark-preset-lint-recommended --quiet --frail
+          npx linkinator content --recurse --silent --timeout=60000 --skip "^https?://"

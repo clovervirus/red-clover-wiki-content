@@ -10,4 +10,3 @@ tags: [grow, troubleshooting]
 - Check plant age, pot weight, and runoff history.
 - Compare symptoms against the IPM and deficiency guides.
 - Escalate to the journal or issue tracker when unresolved.
-
