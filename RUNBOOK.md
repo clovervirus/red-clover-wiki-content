@@ -58,6 +58,6 @@ npm install
 npx markdownlint-cli2 "**/*.md" "!node_modules" "!**/dist/**"
 npx remark . --quiet --frail
 npx linkinator content --recurse --silent --timeout=60000 --skip "^https?://"
-```
+```text
 
 Run the commands before opening a PR to match CI.

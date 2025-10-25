@@ -21,7 +21,7 @@ content/               # Markdown pages that become wiki articles
 templates/             # Front-matter templates for new content
 static/images/         # Shared diagrams, photos, and embeds
 .github/workflows/     # Automation for linting and link checking
-```
+```text
 
 ## Working With Content
 
@@ -37,6 +37,6 @@ npm install
 npx markdownlint-cli2 "**/*.md" "!node_modules" "!**/dist/**"
 npx remark . --quiet --frail
 npx linkinator content --recurse --silent --timeout=60000 --skip "^https?://"
-```
+```text
 
 Install tooling once per machine; subsequent runs only need the `npx` commands.
