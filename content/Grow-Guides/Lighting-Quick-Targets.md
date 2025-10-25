@@ -18,4 +18,5 @@ tags: [grow, lighting]
 ### Tips
 
 - Verify with a PAR map when possible; avoid hotspots >1100 PPFD unless leaf temps are controlled.
+
 - If leaves taco or bleach, lower intensity or raise fixtures, and re-check VPD.

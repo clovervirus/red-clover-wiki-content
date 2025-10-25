@@ -13,12 +13,17 @@ dateCreated: 2025-10-25T12:18:10.969Z
 ## Grow Notes
 
 - Environment:
+
 - Feeding:
+
 - Training:
 
 ## Harvest & Cure
 
 - Harvest date:
+
 - Wet/Dry weights:
+
 - Aroma & Effects:
+
 - Lessons learned:

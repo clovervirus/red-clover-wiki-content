@@ -3,7 +3,9 @@
 ## Overview
 
 - Goal: …
+
 - Audience: …
+
 - Time required: …
 
 ## Preparation

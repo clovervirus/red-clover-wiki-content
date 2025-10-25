@@ -26,9 +26,12 @@ static/images/         # Shared diagrams, photos, and embeds
 ## Working With Content
 
 1. Create or edit Markdown files in `content/` and open a pull request.
-2. Confirm **Content CI** passes; fix lint or link issues if it fails.
-3. After merge, run **Storage → Git → Force Sync** in Wiki.js to pull immediately, or wait for the scheduled sync.
-4. For wiki-originated changes, verify the background sync pushed commits back to GitHub.
+
+1. Confirm **Content CI** passes; fix lint or link issues if it fails.
+
+1. After merge, run **Storage → Git → Force Sync** in Wiki.js to pull immediately, or wait for the scheduled sync.
+
+1. For wiki-originated changes, verify the background sync pushed commits back to GitHub.
 
 ## Local Checks
 

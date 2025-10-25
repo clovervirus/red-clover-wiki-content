@@ -35,6 +35,7 @@ opening an issue or submitting a change.
   `feature/update-article-title` or `fix/broken-link`.
 
 - Keep branches focused on a single topic to make reviews simple and targeted.
+
 - Rebase on top of `main` when possible to keep history clean and avoid merge
 
   conflicts.
@@ -46,6 +47,7 @@ opening an issue or submitting a change.
   templates within `_templates/`).
 
 - Include relevant front matter and metadata when adding or updating content files.
+
 - Provide clear commit messages that describe the change and reference any related
 
   issues.
@@ -61,7 +63,9 @@ opening an issue or submitting a change.
 ## Pull Requests
 
 - Push your branch and open a pull request against `main`.
+
 - Summarize the motivation and key updates in the PR description.
+
 - Request a review from a project maintainer. Expect to incorporate feedback or make
 
   adjustments until the change is approved.

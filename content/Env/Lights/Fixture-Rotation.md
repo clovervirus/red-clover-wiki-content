@@ -8,7 +8,9 @@ updated: 2025-10-25
 ## Weekly Rotation
 
 - **Monday:** Swap the two lowest-output fixtures with spares stored in [[Inventory/Bench-Scale|Equipment Cage]].
+
 - **Wednesday:** Rotate fixtures between aisles 2 and 5 to distribute lamp age hours.
+
 - **Friday:** Run the auto-dimming script from the BMS; confirm PPFD matches the targets in [[Env/Setpoints-by-Stage]].
 
 ## PPFD Targets at 18" Above Canopy
@@ -26,5 +28,7 @@ updated: 2025-10-25
 ## Maintenance
 
 - Wipe lens covers every second Friday with 70% IPA and lint-free cloths.
+
 - Log driver faults in [[Data/Crop-Log]] and tag maintenance in the work order system.
+
 - Use [[Calculators/Lighting]] to translate PPFD adjustments into dimming percentages before making changes.

@@ -19,7 +19,11 @@ updated: 2025-10-25
 ## Daily Checks
 
 - Review the environment dashboard for every room; confirm temps, RH, and CO₂ are within ±2 of target values.
+
 - Inspect humidifiers, dehumidifiers, and mini-split filters; empty and clean catch trays if biofilm is present.
+
 - Verify fans and louvers are operating; feel canopy level airflow and adjust oscillation angles as needed.
+
 - Compare overnight trend charts to catch slow drifts or equipment faults; log findings in the environment notebook.
+
 - Reset data loggers at lights on and archive charts weekly to the shared drive.

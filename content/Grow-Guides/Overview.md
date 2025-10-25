@@ -7,6 +7,9 @@ tags: [grow, overview]
 # Grow Guide Overview
 
 1. Plan genetics, environment, and schedule.
-2. Prepare media, nutrients, and equipment.
-3. Track each stage with journals and checklists.
-4. Iterate after every run using the data workflow.
+
+1. Prepare media, nutrients, and equipment.
+
+1. Track each stage with journals and checklists.
+
+1. Iterate after every run using the data workflow.
