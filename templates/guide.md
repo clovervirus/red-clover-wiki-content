@@ -13,7 +13,9 @@ dateCreated: 2025-10-25T14:21:00.527Z
 ## Overview
 
 - Goal: …
+
 - Audience: …
+
 - Time required: …
 
 ## Preparation

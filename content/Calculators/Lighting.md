@@ -8,20 +8,27 @@ updated: 2025-10-25
 ### Inputs
 
 1. Current PPFD measurement at canopy height.
-2. Target PPFD from [[Env/Lights/Fixture-Rotation]].
-3. Fixture maximum output (µmol·m⁻²·s⁻¹) at 100%.
+
+1. Target PPFD from [[Env/Lights/Fixture-Rotation]].
+
+1. Fixture maximum output (µmol·m⁻²·s⁻¹) at 100%.
 
 ### Calculation
 
 1. **Target Ratio:** Target PPFD ÷ Max Output.
-2. **Adjustment:** Target Ratio ÷ (Measured PPFD ÷ Max Output).
-3. Set fixture dimming to `Adjustment × Current Dimming %`.
+
+1. **Adjustment:** Target Ratio ÷ (Measured PPFD ÷ Max Output).
+
+1. Set fixture dimming to `Adjustment × Current Dimming %`.
 
 ### Example
 
 - Measured PPFD: 820
+
 - Target PPFD: 900
+
 - Max Output: 1,100
+
 - Current Dimming: 75%
 
 `Target Ratio = 900 ÷ 1,100 = 0.82`

@@ -10,9 +10,12 @@ updated: 2025-10-25
 ## Additive Order
 
 1. Pre-dissolve each powder in warm RO water (1 cup) before adding to the reservoir.
-2. Add Calcium/Magnesium supplements first, followed by Nitrogen, Phosphorus, and Potassium powders.
-3. Introduce micronutrient blends last while the reservoir is agitating to prevent precipitation.
-4. Allow the solution to mix for five minutes before testing EC and pH.
+
+1. Add Calcium/Magnesium supplements first, followed by Nitrogen, Phosphorus, and Potassium powders.
+
+1. Introduce micronutrient blends last while the reservoir is agitating to prevent precipitation.
+
+1. Allow the solution to mix for five minutes before testing EC and pH.
 
 ## Dosing Reference (Per Gallon)
 
@@ -27,6 +30,9 @@ updated: 2025-10-25
 ## Usage Notes
 
 - Dissolve completely before adding to the main reservoir to avoid undissolved grit clogging emitters.
+
 - Avoid mixing incompatible powders in concentrated form; never combine Silica with Cal/Mag before dilution.
+
 - Document additive doses in the feed log alongside Crop Salt EC adjustments.
+
 - Reduce rates by 25% when stacking multiple RAW products in the same feeding.

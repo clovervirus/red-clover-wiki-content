@@ -1,6 +1,6 @@
 ---
 title: callout-success
-description: 
+description:
 published: true
 date: 2025-10-25T14:20:59.165Z
 tags: 

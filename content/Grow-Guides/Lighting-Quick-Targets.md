@@ -15,7 +15,8 @@ tags: [grow, lighting]
 | Early Flower     | 600–800           | 26–35 (12h)      | Watch stretch and leaf temp    |
 | Mid/Late Flower  | 800–1000          | 35–43 (12h)      | Only if CO₂ and env allow      |
 
-**Tips**
+### Tips
 
 - Verify with a PAR map when possible; avoid hotspots >1100 PPFD unless leaf temps are controlled.
+
 - If leaves taco or bleach, lower intensity or raise fixtures, and re-check VPD.
