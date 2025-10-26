@@ -2,8 +2,8 @@
 title: grow-journal
 description:
 published: true
-date: 2025-10-25T13:53:11.529Z
-tags:
+date: 2025-10-25T14:21:00.495Z
+tags: 
 editor: markdown
 dateCreated: 2025-10-25T13:53:10.281Z
 ---

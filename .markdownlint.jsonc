@@ -4,6 +4,9 @@
   "MD025": { "front_matter_title": "" },
   "MD029": { "style": "one" },
   "MD040": true,
-  "MD041": false,
-  "MD033": false
+  "MD022": true,
+  "MD032": true,
+  "MD012": true,
+  "MD009": { "br_spaces": 0 },
+  "MD033": { "allowed_elements": ["iframe", "div", "span"] }
 }
