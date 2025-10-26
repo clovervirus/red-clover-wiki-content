@@ -1,6 +1,6 @@
----
+﻿---
 title: Red Clover Wiki
-description: Internal grow reference – concise, actionable, always current.
+description: Internal grow reference â€“ concise, actionable, always current.
 tags: [index]
 updated: 2025-10-25
 ---
@@ -25,7 +25,7 @@ updated: 2025-10-25
 
 ## Daily Routine
 
-- Open the environment dashboard and confirm temps, RH, CO₂, and VPD are on target.
+- Open the environment dashboard and confirm temps, RH, COâ‚‚, and VPD are on target.
 
 - Walk veg and flower rooms with a loupe, logging pest or disease pressure in the journal.
 
@@ -34,3 +34,4 @@ updated: 2025-10-25
 - Check irrigation timers, humidifiers, and dehumidifiers for normal operation.
 
 - Update the grow journal with notable training, defoliation, or anomalies.
+
